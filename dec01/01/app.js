@@ -64,7 +64,7 @@ function calculatePuzzle() {
     }
     if (Number(maxCalories) < Number(caloriesTotal)) {
       maxCalories = caloriesTotal
-      elfNumber = Number(i) + Number(1)
+      elfNumber = parseInt(i) + 1
     }
     arrayCalories.push(caloriesTotal)
   }

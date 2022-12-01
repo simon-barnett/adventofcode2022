@@ -54,7 +54,6 @@ function readPuzzleInput() {
 
 function calculatePuzzle() {
   arrayElves = arrayInput.map((arrayInput) => arrayInput.split('\n'))
-  console.log('Number of elves = ' + arrayElves.length)
 
   for (i in arrayElves) {
     let caloriesTotal = 0
@@ -71,6 +70,7 @@ function calculatePuzzle() {
 }
 
 function outputResult() {
+  console.log('Number of elves = ' + arrayElves.length)
   console.log(`Highest calories found for an elf = ` + maxCalories)
   console.log(`Elf number with highest calories = ` + elfNumber)
 }

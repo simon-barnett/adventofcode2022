@@ -46,10 +46,7 @@ function dateTimeToString(dateTime) {
 }
 
 function readPuzzleInput() {
-  arrayInput = fs
-    .readFileSync('./resources/puzzleInput.txt')
-    .toString()
-    .split('\n\n')
+  arrayInput = fs.readFileSync('./resources/puzzleInput.txt').toString().split('\n\n')
 }
 
 function calculatePuzzle() {

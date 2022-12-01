@@ -3,8 +3,6 @@ let fs = require('fs')
 let arrayInput = []
 let arrayElves = []
 let arrayCalories = []
-let maxCalories = 0
-let elfNumber = 0
 
 const name = 'Simon'
 
@@ -46,10 +44,7 @@ function dateTimeToString(dateTime) {
 }
 
 function readPuzzleInput() {
-  arrayInput = fs
-    .readFileSync('./resources/puzzleInput.txt')
-    .toString()
-    .split('\n\n')
+  arrayInput = fs.readFileSync('./resources/puzzleInput.txt').toString().split('\n\n')
 }
 
 function findThreeLargestNumbers(array) {
@@ -70,16 +65,11 @@ function calculatePuzzle() {
   }
 
   topThreeElvesArray = findThreeLargestNumbers(arrayCalories)
-  totalCaloriesForTopThreeElves = findThreeLargestNumbers(arrayCalories).reduce(
-    function (a, b) {
-      return a + b
-    },
-    0
-  )
+  totalCaloriesForTopThreeElves = findThreeLargestNumbers(arrayCalories).reduce(function (a, b) {
+    return a + b
+  }, 0)
 }
 
 function outputResult() {
-  console.log(
-    `Calorie total for top 3 elves = ` + totalCaloriesForTopThreeElves
-  )
+  console.log(`Calorie total for top 3 elves = ` + totalCaloriesForTopThreeElves)
 }
